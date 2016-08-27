@@ -1,0 +1,145 @@
+#####################################  USER TYPES
+
+- Super Admin
+- Admin
+- Marketing Executives
+- Backend Operator
+- Accounting
+
+#####################################  USER TASKS
+
+Super Admin
+- user creation
+- database backup
+- user log
+- create / update / delete
+
+Admin
+- Reports
+  - Invoice
+  - Release Order
+  - RO Vs Invoice ( ascertain profit / loss )
+  - Client
+  - Vendor
+
+Marketing Executive
+- Client - create / filter / search
+- Master client
+  |_ Sub client
+- Link customer to marketing executive
+
+Backend Operator
+- Invoice - CRUD
+- RO - CRUD
+- Notifications / Reminders
+- RO notify insertion date -> notify to client (Reminder)
+- Add credit date in invoice -> notification of due
+
+Accounting
+- Follow up,
+ |_ Pending
+  |_ RO      -> Notification
+  |_ Invoice -> Notification
+- Credit date -> Notification
+
+#####################################  KEY POINTS
+
+- List / Filter / Search for all views
+- Notification / Reminders for respective user types
+- Single customer -> Multiple vendors -> Merge and generate invoice
+- Bulk orders -> Monthly payment -> 1 RO -> Multiple invoice
+ |_ Reminder / Notification should be received
+- For pending RO and invoice -> incorporate partial payment
+- Manage follow up
+- Track -> follow ups / pending payments / payments to vendors
+- Aging of credit period
+- Special transactions
+  |_ Multiple RO -> 1 Bill
+  |_ Multiple Bill -> 1 RO
+- Master client -> Billed in this name -> same credit period applies for all sub clients
+- Splitting of RO and invoice
+- Payment of a sub client is done either by sub client or master client
+- Credit period should be calculated from the date of insertion
+- Important Dates
+  |_ Date of Insertion
+  |_ Date of Publication
+  |_ Date of Invoice
+- Display Types
+  |_ Line - Number of lines
+  |_ Words - Number of words
+  |_ Panel - width x height
+  |_ Classified - width x height
+- Classified
+  |_ Lineage
+  |_ Word
+- Material Types -> pdf, rtf, doc, eps, jpg, tiff
+- Offers
+- Edition - version of article for particular city
+
+#####################################  HIERARCHY
+
+- Vendors
+  |_ Publication 1
+    |_ Edition 1
+    |_ Edition 2
+  |_ Publication 2
+    |_ Edition 1
+    |_ Edition 2
+
+Times of India ( Vendor )
+|_ Times of India ( Publication )
+  |_ Dharwad Edition ( Edition )
+    |_ Page 1
+    |_ Page 2
+    |_ Classifieds
+      |_ Panel
+      |_ Display
+  |_ Hubli Edition
+  |_ Bangalore Edition
+
+
+
+#####################################  ITEMS
+
+- Release Order
+- Invoice
+- Clients
+  |_ Type
+    |_ Master
+    |_ Sub
+- Vendors
+- Orders
+- Order Status
+- Follow ups
+- 
+
+#####################################  MASTER TABLES
+
+- Clients
+- Vendors
+- Publication
+- Edition
+- Page Type - page, classified
+- Display Type
+- Pricing
+- Advertisement type
+- Material type
+- Material status - mail, by hand, response for
+- Sizes
+
+
+#####################################  OTHER TABLES
+
+- Orders
+- Invoices
+- Release Orders
+- Users
+- Tax rate
+
+
+#####################################  OBJECTS
+
+- User
+- Order
+- ReleaseOrder
+- ReleaseOrder
